@@ -29,6 +29,9 @@ You can also embed plots, for example:
 ```{r pressure, echo=FALSE}
 plot(pressure)
 ```
+```{r}
+
+```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
@@ -49,5 +52,21 @@ LondonDateTime
 typeof(twDateTime)
 as.double(twDateTime)
 as.double(LisbonDateTime)
+```
+
+```{r}
+Sys.timezone()
+```
+
+```{r}
+twDateTime <- dmy_hm("19-03-2019 14:04", tz="Asia/Taipei")
+
+twDateTime
+```
+
+```{r}
+ParisDateTime <- with_tz(twDateTime,tzone="Europe/Paris")
+
+ParisDateTime
 ```
 
