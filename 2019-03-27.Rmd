@@ -69,4 +69,59 @@ ParisDateTime <- with_tz(twDateTime,tzone="Europe/Paris")
 
 ParisDateTime
 ```
+```{r}
+typeof(twDateTime)
+as.double(ParisDateTime)
+as.double(twDateTime)
+```
+
+```{r}
+today <- ymd("2018-09-11")
+today
+today1 <- mdy("March 3, 2019")
+today1
+```
+```{r}
+Taiwandatetime<-ymd("2018-09-11")
+Taiwandatetime
+Taiwandatetime2<-dmy("27 March,2019")
+Taiwandatetime2
+```
+
+```{r}
+a <- c(1, 5, -3)
+b <- c(0.5, 12, 2)
+```
+
+```{r}
+aL <- c(1L, 5L, -3L)
+bL <- c(-2L, -4L, 8L)
+class(aL+bL)
+```
+```{r}
+a+bL
+class(a+bL)
+
+aL+bL
+class(aL+bL)
+
+class(aL*bL)
+class(aL/bL)
+```
+
+```{r}
+a
+a+4
+```
+```{r}
+b
+b+3
+```
+
+```{r}
+twDateTime1<- ymd("2019-08-11")
+twDateTime2 <- ymd("2000-02-01")
+twDateTime1-twDateTime2
+class(twDateTime1-twDateTime2)
+```
 
