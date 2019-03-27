@@ -125,3 +125,26 @@ twDateTime1-twDateTime2
 class(twDateTime1-twDateTime2)
 ```
 
+```{r}
+time1<-ymd("2019-03-27")
+time2<-ymd("2000-02-15")
+time1-time2
+```
+
+```{r}
+startingDate <- ymd("2000-02-17")
+```
+
+```{r}
+startingDate + years(1)
+```
+
+```{r}
+startingDate + dyears(1)
+```
+```{r}
+ymd("2000-02-01") -> startingDate
+ymd("2019-08-11") -> endingDate
+endingDate - startingDate
+```
+
