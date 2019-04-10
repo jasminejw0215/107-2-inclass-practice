@@ -51,7 +51,44 @@ studentID
 入學年
 ```
 
-```{r}
 
+
+```{r}
+month <-c("2","7","9")
+day <-c("15","11","23")
+char1 <- c("月","月","月")
+char2 <- c("日","日","日")
+month
+char1
+day 
+char2
+str_c(month,char1,day,char2)
+```
+
+```{r}
+str_c(month,c("月"),day,c("日"))
+str_c(month,"月",day,"日")
+```
+
+```{r}
+month
+day
+str_c(month,day, sep="-")
+```
+
+```{r}
+library(readr)
+```
+
+```{r}
+install.packages("readr")
+```
+
+```{r}
+library(readr)
+githubData <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/githubData.csv")
+username <- githubData$`GitHub username`[11:16]
+reponame <- githubData$`GitHub repo name`[11:16]
+str_c("https://github.com",username,reponame,sep="/")
 ```
 
