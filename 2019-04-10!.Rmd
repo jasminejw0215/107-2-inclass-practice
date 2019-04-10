@@ -1,0 +1,38 @@
+---
+title: "2019-04-10!"
+author: "jasmine"
+date: "2019/4/10"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r}
+library(stringr)
+```
+
+```{r}
+install.packages("stringr")
+```
+
+```{r}
+course <- c("個體經濟學","投資學","總體經濟學")
+course
+str_subset(course,"經濟學")
+```
+```{r}
+course <- c("個體經濟學","投資學","總體經濟學")
+course
+str_detect(course,"經濟學")
+```
+
