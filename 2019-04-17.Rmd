@@ -168,3 +168,7 @@ logiCorrect <- str_length(birthday)==8
 logiCorrect
 ```
 
+```{r}
+favoriteTwo[logiCorrect]
+```
+
