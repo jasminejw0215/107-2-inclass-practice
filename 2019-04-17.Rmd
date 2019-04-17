@@ -169,6 +169,7 @@ logiCorrect
 ```
 
 ```{r}
-favoriteTwo[logiCorrect]
+favoriteTwo[logiCorrect] -> validFavoriteTwo
+validFavoriteTwo
 ```
 
