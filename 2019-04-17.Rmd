@@ -128,3 +128,43 @@ plasticContainer$greenBox
 plasticContainer[["greenBox"]]
 ```
 
+
+
+```{r}
+your_github_username <- "jasminejw0215"
+your_practice_reponame <- "107-2-inclass-practice"
+library(httr)
+library(stringr)
+str_replace_all(
+  "https://api.github.com/repos/:owner/:repo/commits",
+  c(
+    ":owner"=your_github_username,
+    ":repo"=your_practice_reponame
+    )
+  ) -> commitCheckStatement
+commitCheck <- content(GET(commitCheckStatement))
+```
+
+```{r}
+commitCheckStatement
+```
+
+```{r}
+library(readr)
+filmVotingData <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/podcastcompetition3.csv")
+str_replace(filmVotingData$請選擇你最喜歡的影片二部,", by"," by") -> favoriteTwo
+birthday <- filmVotingData$`出生西元年月日（驗證本人用）`
+timeStamp <- filmVotingData$Timestamp
+```
+
+```{r}
+filmVotingData$Timestamp
+filmVotingData[["Timestamp"]]
+filmVotingData$`Timestamp`
+```
+
+```{r}
+logiCorrect <- str_length(birthday)==8
+logiCorrect
+```
+
