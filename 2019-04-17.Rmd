@@ -95,6 +95,7 @@ studentRecord[["姓名"]]
 ```{r}
 studentRecord[["學年平均成績"]][["三年級"]]
 ```
+
 ```{r}
 plasticContainer[c("greenBox","redBox")] 
 plasticContainer[c(1,2)]
