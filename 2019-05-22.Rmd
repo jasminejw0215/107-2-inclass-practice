@@ -53,7 +53,6 @@ ymd_hms(invoiceList$`訂單時區之下單時間`[tpLogical],
           tz="Asia/Taipei") -> tpDateTime
 invoiceList$UTC時間[tpLogical] <-
   with_tz(tpDateTime,tzone="UTC")
-
 invoiceList
 ```
 
