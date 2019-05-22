@@ -78,3 +78,25 @@ ymd_hms_tzChange <- function(input,fromTzone,toTzone){
 ymd_hms_tzChange("1973-02-21 12:05:22","America/New_York","Asia/Taipei")
 ```
 
+```{r}
+library(stringr); library(lubridate)
+
+date_convert_twYM <- function(x){
+  yyyy<-as.integer(str_extract(x,"(?<=(民國))[:digit:]+"))+1911
+  mm<-str_extract(x,"[:digit:]+(?=月)")
+  yyyymmdd <- ymd(str_c(yyyy,mm,"01",sep="-"))
+  y <- ymd(yyyymmdd)
+  return(y)
+}
+date_convert_twYM
+```
+
+```{r}
+date_convert_twYM<-function(x){
+  yyyy<-as.integer(str_extract(twDates,"(?<=(民國))[:digit:]+"))+1911
+mm<-str_extract(twDates,"[:digit:]+(?=月)")
+yyyymmdd <- ymd(str_c(yyyy,mm,"01",sep="-"))
+return(yyyymmdd)
+}
+```
+
